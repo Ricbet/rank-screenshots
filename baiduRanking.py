@@ -13,11 +13,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from PIL import Image
 
-# proxies = {
-#     'http':'http://10.10.1.10:3128',
-#     'https':'http://10.10.1.10:1080',
-# }
-
 # 初始的文件路径，改变工作目录
 phantom_os_cwd = os.getcwd()
 os.chdir(os.path.abspath('../'))
@@ -142,9 +137,9 @@ if __name__ == '__main__':
     # 每一页列出的搜索数量
     rn = 10
     # 关键词
-    wd = '开发者社区'
+    wd = input('请输入关键词: ')
     # 目标地址
-    url = 'juejin.im'
+    url = input('请输入网址：')
     # 启动
     fnKeyRanking( wd, url, pn, rn )
     # 退出driver进程
